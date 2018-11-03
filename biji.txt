@@ -1,0 +1,11 @@
+下面什么意思？
+parser.add_argument('-ed', '--energy_distance', dest='energy_distance', action='store_true', help='use energy distance in place of likelihood')
+感觉应该是true或者false的时候用这个。
+
+
+bits_per_dim = loss_gen[0]/(args.nr_gpu*np.log(2.)*np.prod(obs_shape)*args.batch_size)
+bits_per_dim_test = loss_gen_test[0]/(args.nr_gpu*np.log(2.)*np.prod(obs_shape)*args.batch_size)
+
+loss_fun就是likelihood！！
+bits per dimension = (nll_val / num_pixels) / numpy.log(2)
+注意上面的式子中nll是离散的哦！
